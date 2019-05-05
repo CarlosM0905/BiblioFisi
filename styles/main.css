@@ -4,14 +4,14 @@
 }
 
 .header{
-    background-color: #3949AB;
+    background-color: #1A5276;
     height: 80px;
     box-shadow: 1px 1px 1px #aaaaaa;
     position: relative;
 }
 
 .logo{
-    width: 350px;
+    width: 500px;
     height: 60px;
     position: absolute;
     margin: 10px 10px;
@@ -81,7 +81,7 @@ textarea {
 	border: 0;
 	padding: 10px 5px;
     background: white no-repeat;
-    background-image: linear-gradient(to bottom, #3949AB, #3949ab),
+    background-image: linear-gradient(to bottom, #1A5276, #3949ab),
                       linear-gradient(to bottom, silver, silver);
 	background-size: 0 2px, 100% 1px;
 	background-position: 50% 100%, 50% 100%;
@@ -97,12 +97,12 @@ textarea:focus{
 .btn_submit{
     margin: 0px 10px 15px 10px;
     padding: 10px 10px 10px 10px;
-    background-color: #3949AB;
+    background-color: #1A5276;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
     font-weight: 400;
     color: #fff;
-    border-color: #3949AB;
+    border-color: #1A5276;
     border-radius: 5px;
     box-shadow: 1px 1px 1px #ccc;
 }
@@ -115,7 +115,7 @@ textarea:focus{
 }
 
 .result_num{
-    color: #3949AB;
+    color: #1A5276;
     font-weight: bold;
 }
 
@@ -126,7 +126,7 @@ th{
     border: 1px solid #aaa;
     text-align: center;
     border-radius: 8px;
-    background-color: #3949AB;
+    background-color: #1A5276;
     color: #fff;
 }
 
@@ -150,7 +150,7 @@ table{
 }
 
 .footer{
-    background-color: #3949AB;
+    background-color: #1A5276;
     height: auto;
     position: relative;
     text-align:  center;

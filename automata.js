@@ -425,16 +425,16 @@ function leerArchivo(e) {
 //Get text from TxtArea
 function getText() {
   textArea_txt = document.getElementById("textarea_code").value;
-  updateCountsTextArea(textArea_txt);
+  showResults(textArea_txt);
 }
 
-function updateCountsTextArea(txt) {
-  Scanner.indice = 0;
+function showResults(txt) {
   let auto = new AFDP();
   auto.completarPila(txt);
 
 }
 
+//Shows what the file has
 function mostrarContenido(contenido) {
   var elemento = document.getElementById('contenido-archivo');
   elemento.innerHTML = contenido;
