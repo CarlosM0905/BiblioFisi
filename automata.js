@@ -424,26 +424,26 @@ function showResults(txt) {
   // Hacer visible el modal
   modal.style.display = "block";
   if(txt != "$"){
-    
+
   // Se crea el automata
   let auto = new AFDP();
   // Devuelve true o false
   let resultado = auto.completarPila(txt);
-  
+
   var textoModal = document.getElementById('textoModal');
 
   if(resultado){
-    textoModal.innerText = "El codigo fue reconocido";
+    textoModal.innerText = "La cadena candidata pertenece";
   }
   else{
-    textoModal.innerHTML = "El codigo no fue reconocido";
+    textoModal.innerHTML = "La cadena candidata no pertenece";
   }
   }else{
     var textoModal = document.getElementById('textoModal');
-    textoModal.innerText = "Ingresa algun texto para escanear :c";
+    textoModal.innerText = "Ingrese código a escanear";
   }
 
-  
+
 }
 
 //Shows what the file has
@@ -475,5 +475,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-

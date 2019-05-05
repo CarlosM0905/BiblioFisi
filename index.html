@@ -22,6 +22,7 @@
 
   <section>
     <div class="gcontent">
+
       <div class="content">
         <div class="title">
           <p>Descripción</p>
@@ -34,42 +35,57 @@
         </div>
       </div>
 
-      <div>
-        <div class="content">
-          <form class="form_code">
-            <label for="textarea_code" class="text">Digite el código aqui:</label>
-            <textarea name="textarea_code" id="textarea_code" cols="30" rows="10"
-              placeholder="Ingrese el código..."></textarea>
-            <br></br>
-            <!---El boton que abrira el modal-->
-            <button type="button" onclick="getText()" class="btn_submit" id="OpenModal">Escanear</button>
-
-            <!-- El modal -->
-            <div id="miModal" class="modal">
-
-              <!-- Contenido modal -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                
-                <p id="textoModal">Ingresa algun texto para escanear :c</p>
-                <div style="clear: both"></div>
-              </div>
-              
-            </div>
-            <!--Fin modal-->
-            <br></br>
-            <input type="file" class="btn_submit" id="file-input">
-          </form>
-        </div>
+      <div class="content1">
+        <p class="title">Reglas de Transición</p>
+        <p class = "text"> <span class="left">(q0, if ,P0)</span>→<span class="right">(q1, if )</span> </p>
+        <p class="text"> (q0, while ,P0)  → (q1, while) </p>
+        <p class="text"> (q1, if ,-)      → (q1, if ) </p>
+        <p class="text"> (q1, while ,-)   → (q1, while) </p>
+        <p class="text"> (q1, else , if ) →  (q1,else) </p>
+        <p class="text"> (q1, endif ,else) → (q1, bb ) </p>
+        <p class="text"> (q1, endwhile ,while) → (q1, b) </p>
+        <p class="text"> (q1, $ , P0 ) → (qF,-) </p>
+<br></br>
 
       </div>
+
+      <div class="content2">
+        <form class="form_code">
+          <label for="textarea_code" class="text">Digite el código aqui:</label>
+          <textarea name="textarea_code" id="textarea_code" cols="30" rows="10" placeholder="Ingrese el código..."></textarea>
+          <br></br>
+          <!---El boton que abrira el modal-->
+          <button type="button" onclick="getText()" class="btn_submit" id="OpenModal">Escanear</button>
+
+          <!-- El modal -->
+          <div id="miModal" class="modal">
+
+            <!-- Contenido modal -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p class="title">Resultado</p>
+              <p id="textoModal" class="text"></p>
+              <div style="clear: both"></div>
+            </div>
+
+          </div>
+          <!--Fin modal-->
+          <br></br>
+          <input type="file" class="btn_submit" id="file-input">
+        </form>
+
+      </div>
+
     </div>
+
   </section>
-  <footer>
+
+  <!-- cambie la position en el css, but sigue cambiando >:v
+<footer>
     <div class="footer">
       <p class="text_footer">Copyright &copy; Facultad de Ingeniería de Sistemas - UNMSM 2019</p>
     </div>
-  </footer>
+  </footer>-->
   <script src="automata.js"></script>
 </body>
 

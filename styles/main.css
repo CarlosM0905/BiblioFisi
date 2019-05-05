@@ -38,6 +38,27 @@
     width: 100%;
 }
 
+.content1{
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px #aaa;
+    border-radius: 15px;
+    margin: 20px 10px 15px 10px;
+    background-color: #fff;
+    float:left;
+    width : 25%
+}
+.content2{
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px #aaa;
+    border-radius: 15px;
+    margin: 20px 10px 15px 10px;
+    background-color: #fff;
+    float : left;
+    width: 70%;
+}
+
 .content{
     height: auto;
     border: 1px solid #ccc;
@@ -151,9 +172,12 @@ table{
 
 .footer{
     background-color: #1A5276;
-    height: auto;
-    position: relative;
     text-align:  center;
+   position: relative;
+     left:0px;
+     bottom:0px;
+     height:auto;
+     width:100%;
 }
 
 .text_footer{
@@ -170,29 +194,29 @@ table{
 
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.4);
   }
-  
+
   /* Contenido del modal*/
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #bbb;
     border-radius: 5px;
-    width: 50%; 
+    width: 50%;
     box-shadow: 1px 1px 1px 1px #555;
   }
-  
+
   /* Boton cerrar */
   .close {
     color: #aaa;
@@ -200,10 +224,18 @@ table{
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
+
+.left{
+  align: left;
+}
+
+.right{
+  align: right;  
+}
