@@ -39,9 +39,25 @@
         <div class="content">
           <form class="form_code">
             <label for="textarea_code" class="text">Digite el código aqui:</label>
-            <textarea name="textarea_code" id="textarea_code" cols="30" rows="10" placeholder="Ingrese el código..."></textarea>
+            <textarea name="textarea_code" id="textarea_code" cols="30" rows="10"
+              placeholder="Ingrese el código..."></textarea>
             <br></br>
-            <button type="button" onclick="getText()" class="btn_submit">Escanear</button>
+            <!---El boton que abrira el modal-->
+            <button type="button" onclick="getText()" class="btn_submit" id="OpenModal">Escanear</button>
+
+            <!-- El modal -->
+            <div id="miModal" class="modal">
+
+              <!-- Contenido modal -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <p id="textoModal">Ingresa algun texto para escanear :c</p>
+                <div style="clear: both"></div>
+              </div>
+              
+            </div>
+            <!--Fin modal-->
             <br></br>
             <input type="file" class="btn_submit" id="file-input">
           </form>

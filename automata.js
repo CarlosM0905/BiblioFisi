@@ -336,6 +336,7 @@ var AFDP = /** @class */ (function() {
 
     while (Q != QF && Q != QE) {
       var simbolo = Scanner.obtenerSimbolo(texto);
+
       if (simbolo == undefined) {
         break;
       }
@@ -393,9 +394,9 @@ var AFDP = /** @class */ (function() {
       }
     }
     if (Q === QF) {
-      console.log("Reconoce");
+      return true;
     } else {
-      console.log("Error");
+      return false;
     }
   };
   return AFDP;
@@ -424,14 +425,35 @@ function leerArchivo(e) {
 
 //Get text from TxtArea
 function getText() {
+  Scanner.indice = 0;
   textArea_txt = document.getElementById("textarea_code").value;
-  showResults(textArea_txt);
+  showResults(textArea_txt + "$");
 }
 
 function showResults(txt) {
+  // Hacer visible el modal
+  modal.style.display = "block";
+  if(txt != "$"){
+    
+  // Se crea el automata
   let auto = new AFDP();
-  auto.completarPila(txt);
+  // Devuelve true o false
+  let resultado = auto.completarPila(txt);
+  
+  var textoModal = document.getElementById('textoModal');
 
+  if(resultado){
+    textoModal.innerText = "El codigo fue reconocido";
+  }
+  else{
+    textoModal.innerHTML = "El codigo no fue reconocido";
+  }
+  }else{
+    var textoModal = document.getElementById('textoModal');
+    textoModal.innerText = "Ingresa algun texto para escanear :c";
+  }
+
+  
 }
 
 //Shows what the file has
@@ -442,3 +464,26 @@ function mostrarContenido(contenido) {
 
 document.getElementById('file-input')
   .addEventListener('change', leerArchivo, false);
+
+
+
+// Obtener el elemento modal
+var modal = document.getElementById('miModal');
+
+//Obtener el boton que abre el modal
+var btn = document.getElementById("OpenModal");
+// Boton que cierra el modal
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
