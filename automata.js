@@ -309,16 +309,6 @@ var Pila = /** @class */ (function() {
     return valor;
   };
 
-  Pila.prueba = function() {
-    var pilita = new Pila();
-    pilita.apilar("Hola");
-    pilita.apilar("Mundo");
-    pilita.apilar("TS");
-    console.log(pilita.desapilar());
-    console.log(pilita.desapilar());
-    console.log(pilita.desapilar());
-    console.log(pilita.desapilar());
-  };
   return Pila;
 }());
 //Methods and Attributes for file defined
