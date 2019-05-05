@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="icon" type="image/png" href="img/icons8-scanner-24.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
-    <title>Escaner</title>
+    <title>Autómata a Pilas</title>
 </head>
 
 <body>
@@ -16,19 +16,18 @@
         <div class="header">
             <div class="logo">
                 <img src="img/icons8_scanner_100px.png" class="logo_img" alt="logo">
-                <p class="logo_font">Escaner C++</p>
+                <p class="logo_font">Autómata a Pilas</p>
             </div>
         </div>
     </header>
     <section>
         <div class="gcontent">
             <div class="content">
-                    <div class="title"><p>Nota :</p></div>
+                    <div class="title"><p>Descripción</p></div>
                 <div class="text">
                     <p>
-                        Esta herramienta permite separar en símbolos cualquier código fuente escrito en el lenguaje de
-                        programación C++. Para su uso, ingresar el código en el TextArea debajo o seleccionar el código
-                        fuente <span class = "format">(.txt</span>  <span class = "format">.cpp)</span>.
+                        Esta herramienta permite reconocer expresiones parentizadas, en este caso especificamente
+                        <span class = "format">if, else, endif, while y endwhile</span>.
                     </p>
                 </div>
             </div>
@@ -44,8 +43,9 @@
                         <input type="file" class="btn_submit" id="file-input">
                     </form>
                 </div>
+
                 <div class="content">
-                    <div class="title"><p>Resultados :</p></div>
+                    <div class="title"><p>Resultado :</p></div>
                     <div class="text">
                         <label class="text">Identificadores <span class="format">(x, num1, cadena3, resultado_Total, etc)</span> :  <span
                                 id="id" class="result_num">0</span></label>
@@ -60,15 +60,13 @@
                         <label class="text">Operadores <span class="format">(++, +=, +, - , %, etc)</span> :  <span id="op" class="result_num">0</span></label>
                         <label class="text">Otros <span class="format">([],{}, (), : , ; , etc)</span> :  <span id="other" class="result_num">0</span></label>
 
-                        
-
                     </div>
                 </div>
                 <div style="text-align:center;">
                     <button type="button" onclick="showTable()" class="btn_submit">Mostrar Tabla</button>
                 </div>
                 <div class="tabla_resultados" id="tabla_resultados">
-                    
+
                 </div>
             </div>
         </div>
