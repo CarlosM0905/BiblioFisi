@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: #3949AB;
+    height: 80px;
+    box-shadow: 1px 1px 1px #aaaaaa;
+    position: relative;
+}
+
+.logo{
+    width: 350px;
+    height: 60px;
+    position: absolute;
+    margin: 10px 10px;
+}
+
+.logo_font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px #444;
+    float: left;
+    margin: 5px 5px;
+    line-height: 50px;
+}
+
+.logo_img{
+    width: 50px;
+    margin: 5px 5px;
+    float: left;
+}
+
+.gcontent{
+    width: 100%;
+}
+
+.content{
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px #aaa;
+    border-radius: 15px;
+    margin: 20px 10px 15px 10px;
+    background-color: #fff;
+
+}
+
+.title{
+    margin: 10px 10px 10px 15px;
+    line-height: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text{
+    margin: 10px 10px 15px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.format{
+    font-style: italic;
+    color: #616A6B;
+}
+
+.form_code{
+    text-align: center;
+	width: 50%;
+    margin: 0 auto;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	border: 0;
+	padding: 10px 5px;
+    background: white no-repeat;
+    background-image: linear-gradient(to bottom, #3949AB, #3949ab),
+                      linear-gradient(to bottom, silver, silver);
+	background-size: 0 2px, 100% 1px;
+	background-position: 50% 100%, 50% 100%;
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+}
+
+textarea:focus{
+	background-size: 100% 2px, 100% 1px;
+	outline: none;
+}
+
+.btn_submit{
+    margin: 0px 10px 15px 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #3949AB;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    border-color: #3949AB;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+
+#textarea_code{
+    font-family: 'Lucida Console', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.result_num{
+    color: #3949AB;
+    font-weight: bold;
+}
+
+th{
+    width: 140px;
+    height: 40px;
+    border-color: #ccc;
+    border: 1px solid #aaa;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #3949AB;
+    color: #fff;
+}
+
+td{
+    width: 140px;
+    height: 40px;
+    border-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tabla_resultados{
+    width: 100%;
+    margin-bottom: 15px;
+}
+table{
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.footer{
+    background-color: #3949AB;
+    height: auto;
+    position: relative;
+    text-align:  center;
+}
+
+.text_footer{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px #444;
+    line-height: 60px;
+}
