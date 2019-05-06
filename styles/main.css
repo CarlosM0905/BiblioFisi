@@ -66,6 +66,7 @@
     border-radius: 15px;
     margin: 20px 10px 15px 10px;
     background-color: #fff;
+    text-align: justify;
 
 }
 
@@ -173,11 +174,12 @@ table{
 .footer{
     background-color: #1A5276;
     text-align:  center;
-   position: relative;
+    position: relative;
      left:0px;
      bottom:0px;
-     height:auto;
-     width:100%;
+
+     width:auto;
+     clear: both;
 }
 
 .text_footer{
@@ -232,6 +234,7 @@ table{
     cursor: pointer;
   }
 
+  /*
 .left{
   align: left;
 }
@@ -239,3 +242,4 @@ table{
 .right{
   align: right;  
 }
+*/

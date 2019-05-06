@@ -1,38 +1,38 @@
 //Deifiniendo atributos y métodos principales
-var Simbolo = /** @class */ (function() {
+var Simbolo = /** @class */ (function () {
   function Simbolo(cadena, tipo) {
     this.cadena = cadena;
     this.tipo = tipo;
     this.longitud = cadena.length;
   }
-  Simbolo.prototype.getCadena = function() {
+  Simbolo.prototype.getCadena = function () {
     return this.cadena;
   };
-  Simbolo.prototype.setCadena = function(cadena) {
+  Simbolo.prototype.setCadena = function (cadena) {
     this.cadena = cadena;
   };
-  Simbolo.prototype.getTipo = function() {
+  Simbolo.prototype.getTipo = function () {
     return this.tipo;
   };
-  Simbolo.prototype.setTipo = function(tipo) {
+  Simbolo.prototype.setTipo = function (tipo) {
     this.tipo = tipo;
   };
-  Simbolo.prototype.getLongitud = function() {
+  Simbolo.prototype.getLongitud = function () {
     return this.longitud;
   };
-  Simbolo.prototype.setLongitud = function(longitud) {
+  Simbolo.prototype.setLongitud = function (longitud) {
     this.longitud = longitud;
   };
-  Simbolo.prototype.toString = function() {
+  Simbolo.prototype.toString = function () {
     return "Cadena:" + this.cadena + " Tipo:" + this.tipo;
   };
   return Simbolo;
 }());
 
 //Definiendo Es reservada
-var Scanner = /** @class */ (function() {
-  function Scanner() {}
-  Scanner.esReservada = function(palabra) {
+var Scanner = /** @class */ (function () {
+  function Scanner() { }
+  Scanner.esReservada = function (palabra) {
     var inicio = 0;
     var fin = this.PALABRAS_R.length - 1;
     while (inicio <= fin) {
@@ -50,7 +50,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo es Tipo Dato
-  Scanner.esTipoDato = function(palabra) {
+  Scanner.esTipoDato = function (palabra) {
     var inicio = 0;
     var fin = this.TIPOS_DATO.length - 1;
     while (inicio <= fin) {
@@ -67,7 +67,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo Obtener Simbolo
-  Scanner.obtenerSimbolo = function(cadena) {
+  Scanner.obtenerSimbolo = function (cadena) {
     if (this.indice <= cadena.length) {
       while (cadena.charAt(this.indice) == ' ' || cadena.charAt(this.indice) == '\n') {
         this.indice++;
@@ -144,7 +144,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo si es identificador
-  Scanner.esIdentificador = function(cadena, indice) {
+  Scanner.esIdentificador = function (cadena, indice) {
     var id = "";
     var simbolo;
     while (cadena.charAt(indice) >= 'a' && cadena.charAt(indice) <= 'z' ||
@@ -165,7 +165,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo si es número
-  Scanner.esNumero = function(cadena, indice) {
+  Scanner.esNumero = function (cadena, indice) {
     var numero = "";
     var simbolo;
     while (cadena.charAt(indice) >= '0' && cadena.charAt(indice) <= '9' ||
@@ -178,7 +178,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo Operador Relacional
-  Scanner.esOperadorR = function(cadena, indice) {
+  Scanner.esOperadorR = function (cadena, indice) {
     var operador = "";
     var simbolo;
     while (cadena.charAt(indice) == '=' || cadena.charAt(indice) == '!' ||
@@ -195,7 +195,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo Operador Lógico
-  Scanner.esOperadorL = function(cadena, indice) {
+  Scanner.esOperadorL = function (cadena, indice) {
     var operador = "";
     var simbolo;
     while (cadena.charAt(indice) == '&' || cadena.charAt(indice) == '|' ||
@@ -208,7 +208,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo Operador Aritmetico
-  Scanner.esOperadorA = function(cadena, indice) {
+  Scanner.esOperadorA = function (cadena, indice) {
     var operador = "";
     var simbolo;
     while (cadena.charAt(indice) == '+' || cadena.charAt(indice) == '-' ||
@@ -222,7 +222,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo si es cadena
-  Scanner.esCadena = function(cadena, indice) {
+  Scanner.esCadena = function (cadena, indice) {
     var cad = "";
     var simbolo;
     do {
@@ -235,7 +235,7 @@ var Scanner = /** @class */ (function() {
   };
 
   //Definiendo Caracter
-  Scanner.esCaracter = function(cadena, indice) {
+  Scanner.esCaracter = function (cadena, indice) {
     var caracter = "";
     var simbolo;
     do {
@@ -264,7 +264,7 @@ var Scanner = /** @class */ (function() {
 //Here starts what homework was
 
 //--Defining attributes and methods for Pile
-var Nodo = /** @class */ (function() {
+var Nodo = /** @class */ (function () {
   function Nodo(valor, sgte) {
     this.valor = valor;
     this.sgte = sgte;
@@ -272,16 +272,16 @@ var Nodo = /** @class */ (function() {
   return Nodo;
 }());
 
-var Pila = /** @class */ (function() {
+var Pila = /** @class */ (function () {
   function Pila() {
     this.tope = null;
   }
 
-  Pila.prototype.estaVacia = function() {
+  Pila.prototype.estaVacia = function () {
     return this.tope === null;
   };
 
-  Pila.prototype.cima = function() {
+  Pila.prototype.cima = function () {
     if (this.tope == null) {
       return null;
     } else {
@@ -289,7 +289,7 @@ var Pila = /** @class */ (function() {
     }
   };
 
-  Pila.prototype.apilar = function(valor) {
+  Pila.prototype.apilar = function (valor) {
     if (this.tope === null) {
       this.tope = new Nodo(valor, null);
     } else {
@@ -298,7 +298,7 @@ var Pila = /** @class */ (function() {
     }
   };
 
-  Pila.prototype.desapilar = function() {
+  Pila.prototype.desapilar = function () {
     var valor;
     if (this.tope != null) {
       valor = this.tope.valor;
@@ -315,11 +315,11 @@ var Pila = /** @class */ (function() {
 
 //Defining AFPD Methods
 //Most important part of the code
-var AFDP = /** @class */ (function() {
+var AFDP = /** @class */ (function () {
   function AFDP() {
     this.pila = new Pila();
   }
-  AFDP.prototype.completarPila = function(texto) {
+  AFDP.prototype.completarPila = function (texto) {
     var QF = 100;
     var QE = -1;
     var Q = 0;
@@ -406,7 +406,7 @@ function leerArchivo(e) {
     return;
   }
   var lector = new FileReader();
-  lector.onload = function(e) {
+  lector.onload = function (e) {
     var contenido = e.target.result;
     document.getElementById("textarea_code").value = contenido;
   };
@@ -423,22 +423,22 @@ function getText() {
 function showResults(txt) {
   // Hacer visible el modal
   modal.style.display = "block";
-  if(txt != "$"){
+  if (txt != "$") {
 
-  // Se crea el automata
-  let auto = new AFDP();
-  // Devuelve true o false
-  let resultado = auto.completarPila(txt);
+    // Se crea el automata
+    let auto = new AFDP();
+    // Devuelve true o false
+    let resultado = auto.completarPila(txt);
 
-  var textoModal = document.getElementById('textoModal');
+    var textoModal = document.getElementById('textoModal');
 
-  if(resultado){
-    textoModal.innerText = "La cadena candidata pertenece";
-  }
-  else{
-    textoModal.innerHTML = "La cadena candidata no pertenece";
-  }
-  }else{
+    if (resultado) {
+      textoModal.innerText = "La cadena candidata pertenece";
+    }
+    else {
+      textoModal.innerHTML = "La cadena candidata no pertenece";
+    }
+  } else {
     var textoModal = document.getElementById('textoModal');
     textoModal.innerText = "Ingrese código a escanear";
   }
@@ -466,11 +466,11 @@ var btn = document.getElementById("OpenModal");
 var span = document.getElementsByClassName("close")[0];
 
 
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }

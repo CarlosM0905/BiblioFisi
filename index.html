@@ -32,27 +32,32 @@
             Esta herramienta permite reconocer expresiones parentizadas, en este caso especificamente
             <span class="format">if, else, endif, while y endwhile</span>.
           </p>
+          <p>
+            Se utilizo como base el escáner previamente desarrollado <a
+              href="https://carlosm0905.github.io/Scanner/">aqui</a>.
+          </p>
         </div>
       </div>
 
       <div class="content1">
+
         <p class="title">Reglas de Transición</p>
-        <p class = "text"> <span class="left">(q0, if ,P0)</span>→<span class="right">(q1, if )</span> </p>
-        <p class="text"> (q0, while ,P0)  → (q1, while) </p>
-        <p class="text"> (q1, if ,-)      → (q1, if ) </p>
-        <p class="text"> (q1, while ,-)   → (q1, while) </p>
-        <p class="text"> (q1, else , if ) →  (q1,else) </p>
-        <p class="text"> (q1, endif ,else) → (q1, bb ) </p>
-        <p class="text"> (q1, endwhile ,while) → (q1, b) </p>
-        <p class="text"> (q1, $ , P0 ) → (qF,-) </p>
-<br></br>
+        <pre class="text"> (q0, if, P0)  →  (q1, if)</pre>
+        <pre class="text"> (q0, while, P0)  →  (q1, while) </pre>
+        <pre class="text"> (q1, if, -)  →  (q1, if) </pre>
+        <pre class="text"> (q1, while, -)  →  (q1, while) </pre>
+        <pre class="text"> (q1, else, if)  →  (q1, else) </pre>
+        <pre class="text"> (q1, endif, else)  →  (q1, bb) </pre>
+        <pre class="text"> (q1, endwhile, while)  →  (q1, b) </pre>
+        <pre class="text"> (q1, $, P0)  →  (qF, -) </pre>
 
       </div>
 
       <div class="content2">
         <form class="form_code">
           <label for="textarea_code" class="text">Digite el código aqui:</label>
-          <textarea name="textarea_code" id="textarea_code" cols="30" rows="10" placeholder="Ingrese el código..."></textarea>
+          <textarea name="textarea_code" id="textarea_code" cols="30" rows="10"
+            placeholder="Ingrese el código..."></textarea>
           <br></br>
           <!---El boton que abrira el modal-->
           <button type="button" onclick="getText()" class="btn_submit" id="OpenModal">Escanear</button>
@@ -80,12 +85,12 @@
 
   </section>
 
-  <!-- cambie la position en el css, but sigue cambiando >:v
-<footer>
+  <footer>
     <div class="footer">
       <p class="text_footer">Copyright &copy; Facultad de Ingeniería de Sistemas - UNMSM 2019</p>
     </div>
-  </footer>-->
+  </footer>
+
   <script src="automata.js"></script>
 </body>
 
